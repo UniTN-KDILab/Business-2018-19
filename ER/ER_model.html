@@ -1,0 +1,213 @@
+<html>
+<head><title>Image map created by yEd</title>
+<style type="text/css">
+.tooltip {
+  font-size:10pt;
+  background-color:#FFFFCC;
+  border:1px solid black;
+  padding:2px
+}
+</style>
+<style type="text/css">
+.tooltip {
+  position:absolute;
+  display:none
+}
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+tooltip = null;
+document.onmousemove = updateTooltip;
+function updateTooltip(e) {
+try {
+if (document.all) {
+if (document.documentElement && document.documentElement.scrollTop) { // Explorer 6 Strict
+x = document.documentElement.scrollLeft + window.event.x;
+y = document.documentElement.scrollTop + window.event.y;
+}
+else { // all other Explorers
+x = document.body.scrollLeft + window.event.x;
+y = document.body.scrollTop + window.event.y;
+}
+}
+else {
+x = e.pageX;
+y = e.pageY;
+}
+if (tooltip != null) {
+o = 20;
+var sx, sy;
+if (self.pageYOffset) { // all except Explorer
+sx = self.pageXOffset;
+sy = self.pageYOffset;
+}
+else if (document.documentElement && document.documentElement.scrollTop) { // Explorer 6 Strict
+sx = document.documentElement.scrollLeft;
+sy = document.documentElement.scrollTop;
+}
+else if (document.body) { // all other Explorers
+sx = document.body.scrollLeft;
+sy = document.body.scrollTop;
+}
+t = y + o + tooltip.offsetHeight;
+w = sy + document.body.clientHeight;
+if (t > w) {
+y = y - o - tooltip.offsetHeight;
+}
+else {
+y = y + o;
+}
+t = x + o + tooltip.offsetWidth;
+w = sx + document.body.clientWidth;
+if (t > w) {
+x = x - o - tooltip.offsetWidth;
+}
+else {
+x = x + o;
+}
+if ((tooltip.style.top == '' || tooltip.style.top == 0) && (tooltip.style.left == '' || tooltip.style.left == 0))
+{
+tooltip.style.width = tooltip.offsetWidth + 'px';
+tooltip.style.height = tooltip.offsetHeight + 'px';
+}
+tooltip.style.left = x + "px";
+tooltip.style.top = y + "px";
+}
+} catch (error) { error = null; }
+}
+function showTooltip(id) {
+try {
+tooltip = document.getElementById(id);
+tooltip.style.display = "block";
+} catch (error) { error = null; }
+}
+function hideTooltip() {
+try {
+tooltip.style.display = "none";
+} catch (error) { error = null; }
+}
+</script>
+
+<div class="tooltip" id="n0">Company</div>
+<div class="tooltip" id="n1">Person</div>
+<div class="tooltip" id="n2">location</div>
+<div class="tooltip" id="n3">category</div>
+<div class="tooltip" id="n4">Financial Information</div>
+<div class="tooltip" id="n5">qualification</div>
+<div class="tooltip" id="n6">patent</div>
+<div class="tooltip" id="n7">had_experience_in</div>
+<div class="tooltip" id="n8">is_part_of</div>
+<div class="tooltip" id="n9">has_education<br>start_date: string<br>end_date: string</div>
+<div class="tooltip" id="n10">invented</div>
+<div class="tooltip" id="n11">contact</div>
+<div class="tooltip" id="n12">investment</div>
+<div class="tooltip" id="n13">acquisition</div>
+<div class="tooltip" id="n14">name</div>
+<div class="tooltip" id="n15">has/had name</div>
+<div class="tooltip" id="n16">employment</div>
+<div class="tooltip" id="n17">role</div>
+<div class="tooltip" id="n18">examined<br>level: string</div>
+<div class="tooltip" id="n19">cites</div>
+<div class="tooltip" id="n20">person_is_assignee_of</div>
+<div class="tooltip" id="n21">company_is_assignee_of</div>
+<div class="tooltip" id="n22">country</div>
+<div class="tooltip" id="n23">city</div>
+<div class="tooltip" id="n24">address</div>
+<div class="tooltip" id="n25">region</div>
+<div class="tooltip" id="n27">geospatial coordinates</div>
+<div class="tooltip" id="n28">facility_presence</div>
+<div class="tooltip" id="n29">sector</div>
+<div class="tooltip" id="n30">industry</div>
+<div class="tooltip" id="n31">sub_industry</div>
+<div class="tooltip" id="n32">descriptive_code</div>
+<div class="tooltip" id="n33">maps_to</div>
+<div class="tooltip" id="n34">employment_role</div>
+<div class="tooltip" id="n35">described_by</div>
+<div class="tooltip" id="n36">acquired</div>
+<div class="tooltip" id="n37">acquired_by</div>
+<div class="tooltip" id="n38">company_invested_in</div>
+<div class="tooltip" id="n39">received_investment</div>
+<div class="tooltip" id="n40">experience_category</div>
+<div class="tooltip" id="n41">person_experience</div>
+<div class="tooltip" id="n42">company_employment</div>
+<div class="tooltip" id="n43">person_employment</div>
+<div class="tooltip" id="n44">company_contact</div>
+<div class="tooltip" id="n45">person_invested_in</div>
+<div class="tooltip" id="n46">lives_in</div>
+<div class="tooltip" id="n47">person_contact</div>
+<div class="tooltip" id="n48">company_facility</div>
+<div class="tooltip" id="n49">facility_location</div>
+<div class="tooltip" id="n50">address_city</div>
+<div class="tooltip" id="n51">city_region</div>
+<div class="tooltip" id="n52">region_country</div>
+<div class="tooltip" id="e24">cites</div>
+<div class="tooltip" id="e25">cited_by</div>
+
+<map name="image1_1">
+  <area shape="poly" coords="622,1351,622,1351,601,1351,596,1346,596,1297,606,1297,606,1346,601,1346,601,1341,622,1341,622,1341" alt="" onmouseover="showTooltip('e25')" onmouseout="hideTooltip()"/>
+  <area shape="poly" coords="711,1341,711,1341,731,1341,731,1346,726,1346,726,1297,736,1297,736,1346,731,1351,711,1351,711,1351" alt="" onmouseover="showTooltip('e24')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1890,524,1995,580" alt="" onmouseover="showTooltip('n52')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1898,724,1988,780" alt="" onmouseover="showTooltip('n51')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1900,897,1990,953" alt="" onmouseover="showTooltip('n50')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1456,661,1573,717" alt="" onmouseover="showTooltip('n49')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="810,700,937,756" alt="" onmouseover="showTooltip('n48')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1035,928,1138,984" alt="" onmouseover="showTooltip('n47')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1416,860,1506,916" alt="" onmouseover="showTooltip('n46')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1141,733,1274,789" alt="" onmouseover="showTooltip('n45')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="856,796,959,852" alt="" onmouseover="showTooltip('n44')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1207,585,1355,641" alt="" onmouseover="showTooltip('n43')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="685,324,850,380" alt="" onmouseover="showTooltip('n42')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1360,937,1495,993" alt="" onmouseover="showTooltip('n41')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1355,614,1495,670" alt="" onmouseover="showTooltip('n40')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="401,447,562,503" alt="" onmouseover="showTooltip('n39')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="254,541,402,597" alt="" onmouseover="showTooltip('n38')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="308,611,398,667" alt="" onmouseover="showTooltip('n37')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="188,652,278,708" alt="" onmouseover="showTooltip('n36')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="308,708,410,764" alt="" onmouseover="showTooltip('n35')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1035,173,1175,229" alt="" onmouseover="showTooltip('n34')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1261,241,1373,297" alt="" onmouseover="showTooltip('n33')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1338,86,1570,176" alt="" onmouseover="showTooltip('n32')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1611,94,1714,184" alt="" onmouseover="showTooltip('n31')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1611,235,1714,325" alt="" onmouseover="showTooltip('n30')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1611,377,1714,467" alt="" onmouseover="showTooltip('n29')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="979,635,1111,744" alt="" onmouseover="showTooltip('n28')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1872,1102,2018,1197" alt="" onmouseover="showTooltip('n27')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1882,616,2003,701" alt="" onmouseover="showTooltip('n25')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1842,976,2047,1062" alt="" onmouseover="showTooltip('n24')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1885,803,2000,875" alt="" onmouseover="showTooltip('n23')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1873,406,2012,504" alt="" onmouseover="showTooltip('n22')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="519,924,723,988" alt="" onmouseover="showTooltip('n21')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="884,1066,1054,1130" alt="" onmouseover="showTooltip('n20')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="621,1318,711,1374" alt="" onmouseover="showTooltip('n19')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="878,966,980,1030" alt="" onmouseover="showTooltip('n18')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1016,15,1193,152" alt="" onmouseover="showTooltip('n17')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1016,278,1193,415" alt="" onmouseover="showTooltip('n16')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="746,493,858,549" alt="" onmouseover="showTooltip('n15')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="928,496,1067,605" alt="" onmouseover="showTooltip('n14')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="47,480,224,617" alt="" onmouseover="showTooltip('n13')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="193,254,461,451" alt="" onmouseover="showTooltip('n12')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1035,785,1138,875" alt="" onmouseover="showTooltip('n11')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="884,892,974,948" alt="" onmouseover="showTooltip('n10')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1118,1051,1386,1122" alt="" onmouseover="showTooltip('n9')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="548,412,638,468" alt="" onmouseover="showTooltip('n8')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1520,892,1690,1029" alt="" onmouseover="showTooltip('n7')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="525,1030,774,1288" alt="" onmouseover="showTooltip('n6')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1372,1117,1604,1212" alt="" onmouseover="showTooltip('n5')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="15,754,292,960" alt="" onmouseover="showTooltip('n4')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1403,395,1506,485" alt="" onmouseover="showTooltip('n3')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1578,616,1725,717" alt="" onmouseover="showTooltip('n2')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="1185,896,1319,1021" alt="" onmouseover="showTooltip('n1')" onmouseout="hideTooltip()"/>
+  <area shape="rect" coords="459,574,735,882" alt="" onmouseover="showTooltip('n0')" onmouseout="hideTooltip()"/>
+</map>
+
+
+    <table class="yimagetable" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td><img class="yimage" src="ER_model1_1.png" usemap="#image1_1" border="0" alt=""/></td>
+      </tr>
+    </table>
+
+</body>
+</html>
