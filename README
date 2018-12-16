@@ -11,7 +11,7 @@ ontologies = 1) Our ontology, before integration 2) CSK 3) The ontology
 extra = Links to data and extra scenarios (what we could not fit in the report).
 
 !The data links should contain 22 datasets, some of
-them are quite big while some of them were scraped (by third parties).
+them are quite big (everything may pile up to some GBs) while some of them were scraped (by third parties).
 Let us know if you need anything and are not able to access them
 from the provided links.
 
