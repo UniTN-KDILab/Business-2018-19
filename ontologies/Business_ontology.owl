@@ -1,0 +1,2422 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jacopo/ontologies/2018/11/untitled-ontology-68#"
+     xml:base="http://www.semanticweb.org/jacopo/ontologies/2018/11/untitled-ontology-68"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Business_ontology="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology">
+        <Business_ontology:authors>Jacopo Gobbi, Kateryna Konotopska</Business_ontology:authors>
+        <Business_ontology:date>14/12/18</Business_ontology:date>
+        <rdfs:comment>This ontology has been developed to capture useful facts
+about a business and what &quot;sorrounds&quot; it, like employees,
+patents, locations, investment and acquisitions and so on.
+During its development, we mainly kept into consideration
+the ontology of schema.org (https://schema.org/Organization) and the
+organization ontology from w3c (https://www.w3.org/TR/vocab-org/%23class-role), while
+trying to keep it easy to use and fit our scenarios/data.</rdfs:comment>
+        <rdfs:label>business</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#authors -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#authors"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#gloss -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#gloss"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#nearest_synset_ID -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#nearest_synset_ID"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#parent_synset_ID -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#parent_synset_ID"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#reference_ontology -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#reference_ontology"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#synonyms -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#synonyms"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#synset_ID -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#synset_ID"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#version -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#version"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#acquired -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#acquired">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Acquisition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#acquirer"/>
+        <Business_ontology:gloss>came into the possession after acquisition
+ru: приобретенный
+it: acquisito</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 02215637
+BabelNet 4.0 id bn:00082276v</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#acquirer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#acquirer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Acquisition"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Business_Organization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08436519
+BabelNet 4.0 id bn:00001000n</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#amount -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#amount">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 05115065
+BabelNet 4.0 id bn:00003601n</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#assignee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#assignee">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Investment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Business_Organization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#examinedBy"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#investor"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 09834860
+BabelNet 4.0 id bn:00006511n</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#cites -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#cites">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 01709116
+BabelNet 4.0 id bn:00082412v</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#derived -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#derived">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Acquisition"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Product"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Service"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00701707
+BabelNet 4.0 id bn:00101215a</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#employedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#employedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#memberOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Employee"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <Business_ontology:gloss>verb employ
+ru: кем нанят
+it: assunto da</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 02414542
+BabelNet 4.0 id bn:00087576v</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#examinedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#examinedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Patent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#inventedBy"/>
+        <Business_ontology:gloss>verb examine
+ru: экзаменирует
+it: esamina</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 02537291
+BabelNet 4.0 id bn:00087731v</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#founded -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#founded">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Foundation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <Business_ontology:gloss>verb found 
+ru: основыванный
+it: fondato</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 02431950
+BabelNet 4.0 id bn:13752291v</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#founder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#founder">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Foundation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 10127072
+BabelNet 4.0 id bn:00009631n</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hadExperienceIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hadExperienceIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Industry"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Sector"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <Business_ontology:gloss>noun experience
+ru: опыт работы в
+it: esperienza in</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 05766056
+BabelNet 4.0 id bn:00032306n</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasArtUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasArtUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Art_Unit"/>
+        <Business_ontology:gloss>describes an attribution to a patent an art unit classification code
+ru: описывает приписку к патенту код классификации unit art
+it: descrive un&apos;attribuzione a un brevetto un codice unit art</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06301417
+BabelNet 4.0 id bn:00026512n</Business_ontology:parent_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasContact">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Address"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#email"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#phoneNumber"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#socialProfileUrl"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <Business_ontology:gloss>an information permitting to get in touch with a person or an organization
+ru: информация, позволяющая связаться с человеком или организацией
+it: un&apos;informazione che consente di mettersi in contatto con una persona o un&apos;organizzazione</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06646883
+BabelNet 4.0 id bn:00046698n</Business_ontology:parent_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasFacilityIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasFacilityIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+        <Business_ontology:gloss>indicates a presence of a facility in a certain location
+ru: имеет предприятие в
+it: ha struttura in</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 02133811
+BabelNet 4.0 id bn:00032645n</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasFinancialDescriptor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasFinancialDescriptor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Financial_Descriptor"/>
+        <Business_ontology:gloss>indicates financial information about an organization in a given period of time
+ru: указывает финансовую информацию об организации за определенный период времени
+it: indica informazioni finanziarie su un&apos;organizzazione in un determinato periodo di tempo</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06301417
+BabelNet 4.0 id bn:00046418n</Business_ontology:parent_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasHeadquartersIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasHeadquartersIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasFacilityIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+        <Business_ontology:gloss>indicates a presence of a headquarter in a certain location
+ru: имеет штаб-квартиру в
+it: indica una presenza di un headquarter in una certa posizione</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 02133811
+BabelNet 4.0 id bn:00043332n</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasMember">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#memberOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#memberOf"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 13832827
+BabelNet 4.0 id  bn:00054276n</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#inventedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#inventedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <Business_ontology:gloss>verb invent
+ru: кем изобретено
+it: inventato da</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 01635953
+BabelNet 4.0 id bn:00085743v</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#investor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#investor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Investment"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <Business_ontology:synset_ID>WordNet 3.1 id 10235776
+BabelNet 4.0 id bn:00047367n</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#livesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#livesIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+        <Business_ontology:gloss>indicates a living location of a person
+ru: живет в 
+it: vive in</Business_ontology:gloss>
+        <Business_ontology:synset_ID>WordNet 3.1 id 01179611
+BabelNet 4.0 id bn:00090411v</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#medianWorkerCompensation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#medianWorkerCompensation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Salary"/>
+        <Business_ontology:gloss>indicates a money amount received by a worker in a given period of time
+ru: указывает сумму денег, полученную работником за определенный период времени
+it: indica un importo di denaro ricevuto da un lavoratore in un determinato periodo di tempo</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 13300285
+BabelNet 4.0 id bn:00029416n</Business_ontology:parent_synset_ID>
+        <Business_ontology:synonyms>median salary, pay
+ru: средняя заработная плата
+it: stipendio medio</Business_ontology:synonyms>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#memberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#memberOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 13832827
+BabelNet 4.0 id  bn:00054276n</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#partOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 13831419
+BabelNet 4.0 id  bn:00021395n</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#playedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#playedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <Business_ontology:gloss>verb play
+ru: кем исполнено
+it: giocato da</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 02375741
+BabelNet 4.0 id bn:00082287v</Business_ontology:nearest_synset_ID>
+        <Business_ontology:synonyms>act, behave</Business_ontology:synonyms>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#providedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#providedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Service"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <Business_ontology:gloss>verb provide
+ru: кем предоставлено
+it: fornito da</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 02332196
+BabelNet 4.0 id bn:00084692v</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#receives -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#receives">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <Business_ontology:gloss>verb receive something
+ru: получать чтото
+it: ricevere qualcosa</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 02214901
+BabelNet 4.0 id bn:00089246v</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#recurs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#recurs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Recurrence"/>
+        <Business_ontology:gloss>verb recur
+ru: повторяется
+it: si ripete</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 00343988
+BabelNet 4.0 id bn:00092553v</Business_ontology:nearest_synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#unitOfMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#unitOfMeasure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 13604927
+BabelNet 4.0 id  bn:00079106n</Business_ontology:synset_ID>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Contact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Contact">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessModel"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#financialConcept"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#gender"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#latitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#longitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfMembers"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#revenueSource"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#workingWithDataType"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06271913
+BabelNet 4.0 id bn:00022112n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#ISIC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#ISIC">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessCode"/>
+        <Business_ontology:gloss>the International Standard Industrial Classification of All Economic Activities (ISIC) 
+is the international reference classification of productive activities
+ru: международная стандартная отраслевая классификация всех видов экономической деятельности (МСОК)
+международная справочная классификация производственной деятельности
+it: classificazione internazionale standard industriale di tutte le attività economiche (ISIC)
+è la classificazione di riferimento internazionale delle attività produttive</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#NAICS -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#NAICS">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessCode"/>
+        <Business_ontology:gloss>the North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy.
+ru: cевероамериканская система отраслевой классификации (NAICS) - это стандарт, используемый федеральными статистическими агентствами при классификации предприятий для сбора, анализа и публикации статистических данных, относящихся к экономике США.
+it: l sistema di classificazione industriale nordamericano (NAICS) è lo standard utilizzato dalle agenzie statistiche federali per classificare gli stabilimenti commerciali allo scopo di raccogliere, analizzare e pubblicare dati statistici relativi all&apos;economia degli Stati Uniti.</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#SIC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#SIC">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessCode"/>
+        <Business_ontology:gloss>Standard Industrial Classification (SIC) codes are four-digit numerical codes assigned by the U.S. government to business establishments to identify the primary business of the establishment
+ru: коды стандартной промышленной классификации (SIC) представляют собой четырехзначные числовые коды, присваиваемые правительством США коммерческим предприятиям для идентификации основной деятельности предприятия.
+it: I codici Standard Industrial Classification (SIC) sono codici numerici a quattro cifre assegnati dal governo degli Stati Uniti agli stabilimenti commerciali per identificare l&apos;attività principale dello stabilimento</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#abstract">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06480622
+BabelNet 4.0 id bn:00000489n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#applicationNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#applicationNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Patent"/>
+        <Business_ontology:gloss>number assigned by the Patent Office when a patent application is filed
+ru: номер данный Патентным ведомством при подаче заявки на патент
+it: numero assegnato dall&apos;ufficio brevetti quando viene presentata una domanda di brevetto</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#artUnitCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#artUnitCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Art_Unit"/>
+        <Business_ontology:gloss>code identifying art unit in patent classification system
+ru: код, идентифицирующий art unit в патентной системе классификации
+it: codice che identifica un&apos;art unit nel sistema di classificazione dei brevetti</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#birthDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#birthDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 15277233
+BabelNet 4.0 id bn:00010679n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#buildingDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#buildingDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Address"/>
+        <Business_ontology:gloss>description of how to reach or distinguish a particural building from the others
+ru: описание того как добраться или отличить конкретное здание от других
+it: descrizione di come raggiungere o distinguere un edificio particolare dagli altri</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06737512
+BabelNet 4.0 id bn:00026501n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#buildingNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#buildingNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Address"/>
+        <Business_ontology:gloss>number indicating location of a building in a street
+ru: номер, указывающий местоположение здания на улице
+it: numero che indica la posizione di un edificio in una strada</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Industry"/>
+        <Business_ontology:gloss>code describing specific industry or subindutry
+ru: код, описывающий конкретную отрасль или подпромышленность
+it: codice che descrive l&apos;industria specifica o subindutria</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessModel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#financialConcept"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#gender"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#latitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#longitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfMembers"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#workingWithDataType"/>
+        <Business_ontology:gloss>how an organization creates, delivers, and captures value
+ru: как организация создает, поставляет и получает ценность
+it: come un&apos;organizzazione crea, consegna e acquisisce valore</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 05898856
+BabelNet 4.0 id bn:00036197n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#latitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#longitude"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#countryCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#countryCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code"/>
+        <Business_ontology:gloss>country codes are short alphabetic or numeric geographical codes (geocodes) developed to represent countries and dependent areas, for use in data processing and communications
+ru: коды стран - это короткие буквенные или числовые географические коды (геокоды), разработанные для представления стран и зависимых районов, для использования в обработке данных и связи
+it: i codici paese sono codici geografici o codici geografici brevi (codici geografici) sviluppati per rappresentare i paesi e le aree dipendenti, per l&apos;uso nell&apos;elaborazione dei dati e nelle comunicazioni</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#currencyCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#currencyCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Currency"/>
+        <Business_ontology:gloss>ISO 4217 is a standard first published by International Organization for Standardization in 1978, which delineates currency designators, country codes, and references to minor units in three tables</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 13406050</Business_ontology:nearest_synset_ID>
+        <Business_ontology:synset_ID>BabelNet 4.0 bn:00758008n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#financialConcept"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#gender"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#latitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#longitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfMembers"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#revenueSource"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#workingWithDataType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06737512
+BabelNet 4.0 id bn:00026501n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#dissolutionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#dissolutionDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <Business_ontology:gloss>the date of formally ending of an organization or a formal body
+ru: дата официального окончания организации или формального органа
+it: la data della fine formale di un&apos;organizzazione o di un entità formale</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#educationName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#educationName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Education"/>
+        <Business_ontology:gloss>name of received qualification from educational certificate
+ru: наименование полученной квалификации из образовательного сертификата
+it: nome della qualifica ricevuta dal certificato di istruzione</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06344646
+BabelNet 4.0 id bn:00056758n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#email">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Contact"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06289979
+BabelNet 4.0 id bn:00029345n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#endDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#endDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <Business_ontology:gloss>what is used to indicate the moment in which something ends
+ru: дата окончания
+it: data di fine</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#filingDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#filingDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Patent"/>
+        <Business_ontology:gloss>the filing date is the date when a patent application is first filed at a patent office
+ru: дата подачи это дата, когда патентная заявка впервые подана в патентное ведомство
+it: la data di deposito è la data in cui una domanda di brevetto viene compilata per la prima volta presso un ufficio brevetti</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#financialConcept -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#financialConcept">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#gender"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#latitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#longitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfMembers"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#revenueSource"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#workingWithDataType"/>
+        <Business_ontology:gloss>a financial concept, for example &quot;revenue&quot; or &quot;assets&quot;
+ru: финансовый концепт, который может быть &quot;доходом&quot; или &quot;активами&quot;
+it: Un concetto finanziario, per esempio &quot;reddito&quot; o &quot;assets&quot;</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06344646
+BabelNet 4.0 id bn:00056758n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#foundationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#foundationDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <Business_ontology:gloss>a date of foundation of an organization
+ru: дата основания организации
+it: data di fondazione di un&apos;organizzazione</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#gender">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>female</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>male</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#latitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#longitude"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfMembers"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#revenueSource"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#workingWithDataType"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 05014082 
+BabelNet 4.0 id bn:00037634n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#grantDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#grantDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Patent"/>
+        <Business_ontology:gloss>date when a patent was granted to its inventor
+ru: дата выдачи патента его изобретателю
+it: data in cui un brevetto è stato concesso al suo inventore</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#lastMilestoneDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#lastMilestoneDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <Business_ontology:gloss>the last date in which something has reached
+an evident goal or status, or an important change.
+For example the date a company became publicly
+traded, or released a new product
+ru:  Последняя дата, в которой что-то достигло
+значимую цель, статус, или важное изменение.
+Например дата, когда компания стала публично
+торгуемой или выпустила новый продукт
+it: la data più recente in cui qualcosa a raggiunto
+un obiettivo, uno stato o un cambiamento considerabili
+importanti. Per esempio la data in cui un&apos;azienda va 
+in borsa o rilascia un prodotto</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08613087
+BabelNet 4.0 id bn:00050179n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08614224
+BabelNet 4.0 id bn:00051951n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfMembers"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06344646
+BabelNet 4.0 id bn:00056758n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfEmployees -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfEmployees">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfMembers"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <Business_ontology:gloss>number of employees in organization
+ru: количество сотрудников в организации
+it: numero di dipendenti nell&apos;organizzazione</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 05128718
+BabelNet 4.0 id bn:00058285n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfMembers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfMembers">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Category"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <Business_ontology:gloss>number of members in organization
+ru: количество членов в организации
+it: numero di membri nell&apos;organizzazione</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 05128718
+BabelNet 4.0 id bn:00058285n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#int"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <Business_ontology:synset_ID>WordNet 3.1 id 13602668
+BabelNet 4.0 id  bn:00000451n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#pastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#pastName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name"/>
+        <Business_ontology:gloss>name used in past to identify an object
+ru: имя, использованное в прошлом для идентификации объекта
+it: nome usato in passato per identificare un oggetto</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06344646
+BabelNet 4.0 id bn:00056758n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#personName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#personName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <Business_ontology:gloss>name used to identify persons only
+ru: имя используется только для идентификации личности
+it: nome usato per identificare solo le persone</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06344646
+BabelNet 4.0 id bn:00056758n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#phoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#phoneNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Contact"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06437781
+BabelNet 4.0 id bn:00058286n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#priorityDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#priorityDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Patent"/>
+        <Business_ontology:gloss>the priority date, sometimes called the &quot;effective filing date&quot;, is the date used to establish the novelty and/or obviousness of a particular invention relative to other art.
+ru: дата приоритета, иногда называемая «датой вступления в силу», является датой, используемой для установления новизны и / или очевидности конкретного изобретения по сравнению с другим искусством.
+it: la data di priorità, a volte chiamata &quot;data di archiviazione effettiva&quot;, è la data utilizzata per stabilire la novità e / o l&apos;ovvietà di una particolare invenzione rispetto ad altre opere d&apos;arte</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#publicationCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#publicationCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+        <Business_ontology:gloss>number assigned to a patent on pubblication
+ru: номер, присвоенный патенту на публикации
+it: numero assegnato a un brevetto alla pubblicazione</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06365341
+BabelNet 4.0 id bn:00020353n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#publicationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#publicationDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+        <Business_ontology:gloss>date of the publication of an invention
+ru: дата публикации изобретения
+it: data di pubblicazione di un&apos;invenzione</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#revenueSource -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#revenueSource">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <Business_ontology:gloss>how an organization generates its income
+ru: Как организация создает свой доход
+it: La maniera in cui un&apos;organizzazione genera le sue entrate</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 13276044
+BabelNet 4.0 id bn:00041873n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#skills -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#skills">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 05644732
+BabelNet 4.0 id bn:00000725n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#socialProfileUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#socialProfileUrl">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Contact"/>
+        <Business_ontology:gloss>a link to a socail profile page of a social network
+ru: ссылка на страницу профиля социальной сети
+it: un collegamento ad una pagina profilo di un social network</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 06370154
+BabelNet 4.0 id bn:13633911n</Business_ontology:nearest_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#specializationName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#specializationName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00584498
+BabelNet 4.0 id bn:00073205n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#startDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#startDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <Business_ontology:gloss>what is used to indicate the moment in which something starts
+ru: дата начала
+it: data d&apos;inizio di qualcosa</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#stockSymbol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#stockSymbol">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Business_Organization"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06543318
+BabelNet 4.0 id bn:00074360n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#surname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#surname">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06348274
+BabelNet 4.0 id bn:00020465n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#title">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#description"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06357363
+BabelNet 4.0 id bn:00077409n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#workingWithDataType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#workingWithDataType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <Business_ontology:gloss>with which kind of data an organization or a person is working with,
+for example medical data
+ru: С какими данными работают организация или человек
+it: con che tipi di dati un&apos;organizzazione o una persona lavorano, per esempio dati medici</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 02600976
+BabelNet 4.0 id bn:00095813v</Business_ontology:parent_synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#zipCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#zipCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#code"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Address"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06367112
+BabelNet 4.0 id bn:00063770n</Business_ontology:synset_ID>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Acquisition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Acquisition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#acquired"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#acquirer"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#amount"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Money_Amount"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#derived"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Product"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Service"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00078239
+BabelNet 4.0 id bn:00001005n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Address -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Address">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#latitude"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#longitude"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#buildingDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#buildingNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#zipCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08508037
+BabelNet 4.0 id bn:00001303n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Art_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Art_Unit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#artUnitCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#description"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:gloss>description of the art unit and their codes used in the patent classification system
+ru : oписание unit art и соответствующих кодов, используемых в системе классификации патентов
+it : descrizione di unit art e dei relativi codici utilizzati nel sistema di classificazione dei brevetti</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 06301417
+BabelNet 4.0 id  bn:03446421n</Business_ontology:parent_synset_ID>
+        <Business_ontology:synonyms>art descriptor</Business_ontology:synonyms>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Business_Organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Business_Organization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Industry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasFacilityIn"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasFinancialDescriptor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Financial_Descriptor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasHeadquartersIn"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#medianWorkerCompensation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Salary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessModel"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#revenueSource"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#dissolutionDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#stockSymbol"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#workingWithDataType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#foundationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numberOfEmployees"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#dissolutionDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#stockSymbol"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:reference_ontology>schema.org
+https://schema.org/Organization</Business_ontology:reference_ontology>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08077878
+BabelNet 4.0 id bn:00014136n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Category">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 05847274
+BabelNet 4.0 id bn:00016733n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08542298
+BabelNet 4.0 id bn:03335997n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#countryCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08562388
+BabelNet 4.0 id bn:00023235n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Currency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Currency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#currencyCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 13407086
+BabelNet 4.0 id bn:00024507n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Derived_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Derived_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Product"/>
+        <Business_ontology:gloss>Product of a business organization derived by acquisition of another business organization
+ru: продукт бизнес-организации, полученный в результате приобретения другой бизнес-организации
+it: Prodotto di un&apos;organizzazione aziendale derivato dall&apos;acquisizione di un&apos;altra organizzazione aziendale</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 03754377
+BabelNet 4.0 id bn:00054416n</Business_ontology:parent_synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Service"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 05993172
+BabelNet 4.0 id bn:00026980n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Employee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#employedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#playedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#receives"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Salary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 10073616
+BabelNet 4.0 id bn:14292888n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Product"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00029677
+BabelNet 4.0 id bn:00032021n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Financial_Descriptor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Financial_Descriptor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#amount"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Money_Amount"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#financialConcept"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:gloss>information about financial variable in certain date
+ru: информация о финансовой переменной на определенную дату
+it: informazioni sulla variabile finanziaria in determinata data</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 13377127
+BabelNet 4.0 id  bn:00016459n</Business_ontology:nearest_synset_ID>
+        <Business_ontology:synonyms>funds, finances, monetary resource, pecuniary resource</Business_ontology:synonyms>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Foundation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Foundation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#founded"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#founder"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00241051
+BabelNet 4.0 id bn:00023654n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Industry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Industry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Sector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#businessCode"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Sector"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08082070
+BabelNet 4.0 id bn:00046576n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Institutonal_Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Institutonal_Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Education"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#providedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#specializationName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:gloss>Education provided by an institution
+ru: oбразование предоставляемое учреждением
+it: istruzione fornita da un&apos;istituzione</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 05993172
+BabelNet 4.0 id bn:00026980n</Business_ontology:parent_synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#inventedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Service"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 13266237
+BabelNet 4.0 id bn:00047023n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Investment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Investment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#amount"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Money_Amount"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#investor"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#assignee"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 01101341
+BabelNet 4.0 id bn:00047358n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Product"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00027365
+BabelNet 4.0 id bn:00051760n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Money_Amount -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Money_Amount">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#unitOfMeasure"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Currency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#numericalValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:gloss>currency and value of a medium of exchange
+ru: валюта и стоимость обменного средства
+it: valuta e valore di un mezzo di scambio</Business_ontology:gloss>
+        <Business_ontology:nearest_synset_ID>WordNet 3.1 id 13394134
+BabelNet 4.0 id bn:00055644n</Business_ontology:nearest_synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Monthly_Recurrence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Monthly_Recurrence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Recurrence"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Yearly_Recurrence"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00256458
+BabelNet 4.0 id bn:00116278r</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <Business_ontology:gloss>an object that is denoted with a name because of its importance
+ru: обьект которому дано имя изза его важности
+it: oggetto o entità che ha abbastanza importanza da avere un suo nome</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 00001740
+BabelNet 4.0 id bn:00031027n</Business_ontology:parent_synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:reference_ontology>The Organization Ontology 
+https://www.w3.org/TR/vocab-org/%23class-role</Business_ontology:reference_ontology>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08024893
+BabelNet 4.0 id bn:00059480n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Patent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Patent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#assignee"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#cites"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Patent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#examinedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#hasArtUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Art_Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#abstract"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#applicationNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#countryCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#filingDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#grantDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#priorityDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#publicationCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#publicationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#title"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#abstract"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 06513132
+BabelNet 4.0 id bn:00060984n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#livesIn"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#gender"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>female</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>male</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#personName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#surname"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#birthDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#skills"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Product"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00007846
+BabelNet 4.0 id bn:00046516n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 03754377
+BabelNet 4.0 id bn:00054416n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Recurrence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Recurrence">
+        <Business_ontology:synset_ID>WordNet 3.1 id 07357963
+BabelNet 4.0 id bn:00066620n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 08648560
+BabelNet 4.0 id bn:00066884n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Role">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#endDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#startDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00721817
+BabelNet 4.0 id bn:00036823n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Salary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Salary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Money_Amount"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#recurs"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Recurrence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 13300285
+BabelNet 4.0 id bn:00029416n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Sector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Sector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Category"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 07983333
+BabelNet 4.0 id bn:00070206n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#providedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 00578562
+BabelNet 4.0 id bn:00070651n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#playedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#receives"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Education"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:synset_ID>WordNet 3.1 id 10685137
+BabelNet 4.0 id bn:00029806n</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Sub_Industry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Sub_Industry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Industry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Industry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <Business_ontology:gloss>industry that makes up part of a larger industry
+ru: отрасль промышленности
+it: industria che fa parte di un&apos;industria più grande</Business_ontology:gloss>
+        <Business_ontology:parent_synset_ID>WordNet 3.1 id 08082070
+BabelNet 4.0 id bn:00046576n</Business_ontology:parent_synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Yearly_Recurrence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Yearly_Recurrence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Recurrence"/>
+        <Business_ontology:synset_ID>WordNet 3.1 id 01976215
+BabelNet 4.0 id bn:00097149a</Business_ontology:synset_ID>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#date">
+        <Business_ontology:synset_ID>WordNet 3.1 id 15184543
+BabelNet 4.0 id bn:00025336n</Business_ontology:synset_ID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment></rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Art_Unit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Financial_Descriptor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Money_Amount"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Art_Unit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Financial_Descriptor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Money_Amount"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Art_Unit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Financial_Descriptor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Money_Amount"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Named_Entity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Recurrence"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#City"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Country"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Region"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Currency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Event"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Service"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Intellectual_Property"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Organization"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacopo/ontologies/2018/11/Business_ontology#Product"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
