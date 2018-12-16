@@ -1,0 +1,13 @@
+Hello there, at the top 
+level of this directory you will find the report, this READMe, and
+3 directories:
+
+ER = ER model, as source code and html file. Also the model without
+	attributes used in the report.
+
+ontologies = 1) Our ontology, before integration 2) CSK 3) The ontology
+	integrated with CSK.
+
+extra = Links to data and extra scenarios (what we could not fit in the report).
+
+
